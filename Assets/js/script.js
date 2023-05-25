@@ -51,7 +51,11 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
 listBox.addEventListener("change", ()=>{
-
-    goto( infinityStones[listBox.value],`${listBox.value.charAt(0).toUpperCase()}${listBox.value.slice(1)} Stone`);
+    if (listBox.value=="1"){
+        console.log("done");
+        map.setView([51.505, -0.09],2);
+    }else{
+        goto( infinityStones[listBox.value],listBox.value);
+    }
 
 });
