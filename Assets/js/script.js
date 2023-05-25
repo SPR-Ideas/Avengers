@@ -40,8 +40,17 @@ function getAllCharacters(){
       });
 
 }
-getAllCharacters();
 
+function getAllStones(){
+    Object.keys(infinityStones).forEach((name)=>{
+        document.getElementById("location").innerHTML+=stoneTemplate(name,
+            "Assets/img/"+(Object.keys(infinityStones).indexOf(name)+1)+".png"
+            ,stonesDescriptions[Object.keys(infinityStones).indexOf(name)]);
+    });
+}
+
+getAllCharacters();
+getAllStones();
 
 var instance = M.Tabs.init(document.getElementById("Tab"),
 {duration:200});
@@ -65,3 +74,12 @@ var nearbyCoordinates = Object.values(infinityStones).map(function(coordinate) {
     var nearbyLongitude = coordinate[1] + Math.random() * 0.02 - 0.01;
     return [nearbyLatitude, nearbyLongitude];
 });
+
+var cards = document.querySelectorAll(".stone.activator");
+cards.forEach(function(card) {
+    card.addEventListener('mouseenter', function() {
+        this.click();;
+       ;
+    });
+
+  });

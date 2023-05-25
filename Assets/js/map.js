@@ -6,6 +6,14 @@ infinityStones={
     time: [51, -1],
     mind: [-16, 40]
 }
+stonesDescriptions=[
+    "The Space Stone manipulates space, enabling teleportation and creation of portals, allowing instant travel across the universe, and altering spatial dimensions.",
+    "The Power Stone harnesses immense energy, enhancing strength and abilities, unleashing devastating power, and amplifying existing powers to an unimaginable level.",
+    "The Reality Stone warps reality, creating illusions, reshaping matter, and altering the laws of physics, allowing the user to bend the fabric of existence.",
+    "The Soul Stone controls souls, interacting with the living and the deceased, granting power over life and death, and providing profound insights into individuals.",
+    "The Time Stone governs time, manipulating its flow, enabling time travel, foreseeing past and future events, and altering the course of history.",
+    "The Mind Stone enhances mental abilities, granting telepathy and telekinesis, and enabling control over the minds of others, accessing cosmic knowledge and understanding."
+]
 
 alertLocation = [
     [43.001, -75.001],[-17.001, -69.001],
@@ -155,4 +163,4 @@ async function startThaonsMovement(){
     // console.log("Engine Stoped...")
 }
 
-setInterval(startThaonsMovement ,1000)
+setInterval(startThaonsMovement ,5000)

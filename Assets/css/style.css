@@ -14,4 +14,19 @@
 #map{
     height: 60vh;
 }
+.card-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+}
+.stone{
+    width: 100px;
+    height: 100px;
+}
+.blur{
+    background-color: rgba(255, 255, 255, 0.15) !important; /* Adjust the transparency as needed */
+    backdrop-filter: blur(10px); /* Adjust the blur strength as needed */
+    border-radius: 10px; /* Adjust the border radius as needed */
 
+}
