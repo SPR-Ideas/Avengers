@@ -9,6 +9,9 @@
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <link rel="stylesheet" href="/Assets/css/style.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+crossorigin=""/>
 <body>
 
     <nav >
@@ -35,8 +38,23 @@
             <div id="crew" class="col s12 row">
 
             </div>
-            <div id="stones" class="col s12">
-                Test 2
+            <div id="stones" class="col s12 row">
+
+                <div class="input-field col s12">
+                    <select id="stones-">
+                      <option value="" disabled selected>Selected None</option>
+                      <option value="power">Power Stone</option>
+                      <option value="space">Space Stone</option>
+                      <option value="reality">Reality Stone</option>
+                      <option value="soul">Soul Stone</option>
+                      <option value="time">Time Stone</option>
+                      <option value="mind">Mind Stone</option>
+                    </select>
+                    <label>Select The Infitiy stone </label>
+                </div>
+
+                <div id="map" class="col s12">
+                </div>
             </div>
             <div id="location" class="col s12">
                 Test 3
@@ -48,12 +66,19 @@
 
 
 </body>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+     crossorigin="">
+</script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/core.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/md5.js"></script>
 
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="/Assets/js/templates.js"></script>
+    <script src="/Assets/js/map.js"></script>
     <script src="/Assets/js/script.js"></script>
 
 </html>

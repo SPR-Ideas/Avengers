@@ -11,4 +11,7 @@
     transition: 200ms ease-in;
     transform: scale(1.1);
 }
+#map{
+    height: 60vh;
+}
 

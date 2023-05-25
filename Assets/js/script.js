@@ -6,6 +6,7 @@ const hash = generateHash(publicApiKey, privateApiKey);
 const comicId = 32477;
 let crewList;
 let crewVIew = document.getElementById("crew");
+listBox = document.getElementById("stones-");
 
 function generateHash(publicKey, privateKey) {
     const input = "1" + privateKey + publicKey;
@@ -41,5 +42,16 @@ function getAllCharacters(){
 }
 getAllCharacters();
 
+
 var instance = M.Tabs.init(document.getElementById("Tab"),
 {duration:200});
+document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('select');
+    var instances = M.FormSelect.init(elems, {});
+  });
+
+listBox.addEventListener("change", ()=>{
+
+    goto( infinityStones[listBox.value],`${listBox.value.charAt(0).toUpperCase()}${listBox.value.slice(1)} Stone`);
+
+});
