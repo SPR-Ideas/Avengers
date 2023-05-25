@@ -59,3 +59,9 @@ listBox.addEventListener("change", ()=>{
     }
 
 });
+
+var nearbyCoordinates = Object.values(infinityStones).map(function(coordinate) {
+    var nearbyLatitude = coordinate[0] + Math.random() * 0.02 - 0.01;
+    var nearbyLongitude = coordinate[1] + Math.random() * 0.02 - 0.01;
+    return [nearbyLatitude, nearbyLongitude];
+});
