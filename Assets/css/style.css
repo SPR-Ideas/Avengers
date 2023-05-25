@@ -1,1 +1,14 @@
 .row{margin-top: 1px;}
+.card{
+    overflow: hidden;
+}
+.avatar-title{
+ z-index: 1000;
+ box-shadow: rgba(0, 0, 0, 0.548) 0px -50px 36px -28px inset;
+ width: 100%;
+}
+.avatar:hover{
+    transition: 200ms ease-in;
+    transform: scale(1.1);
+}
+

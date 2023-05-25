@@ -5,6 +5,7 @@ const privateApiKey = "5dc0104b90f1888efa930dc5c261b93e31cde842";
 const hash = generateHash(publicApiKey, privateApiKey);
 const comicId = 32477;
 let crewList;
+let crewVIew = document.getElementById("crew");
 
 function generateHash(publicKey, privateKey) {
     const input = "1" + privateKey + publicKey;
@@ -24,13 +25,20 @@ function getAllCharacters(){
       })
       .then(function(data) {
         crewList = data.data.results;
-      })
+        Array(crewList)[0].forEach(x=>{
+            console.log(" val  : ",x);
+            let url = x.thumbnail.path +"."+x.thumbnail.extension;
+            template = charaterTemplate(x.name,url,x.description);
+            console.log(template);
+            crewVIew.innerHTML+= template;
+        })
+
+    })
       .catch(function(error) {
         console.log(error);
       });
 
 }
-
 getAllCharacters();
 
 var instance = M.Tabs.init(document.getElementById("Tab"),
