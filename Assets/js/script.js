@@ -1,6 +1,6 @@
 const baseUrl = "https://gateway.marvel.com:443/v1/public";
-const publicApiKey = "9c05fc86625991334d71ba90df3a516b";
-const privateApiKey = "5dc0104b90f1888efa930dc5c261b93e31cde842";
+const publicApiKey = "61c32950c66c3109e9655eaa1c4b3fc4";
+const privateApiKey = "2fa60ed7bd21a15bf87f2b2a095af113fb43dc63";
 
 const hash = generateHash(publicApiKey, privateApiKey);
 const comicId = 32477;
